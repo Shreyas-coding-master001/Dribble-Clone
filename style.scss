@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+html{
+    background-color: black;
+    font-size: 4vw;
+    
+}
+
+@mixin flexing($gap : 0rem){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+main{
+    padding: 0.5rem;
+    @include flexing(0.7rem);
+    max-width: 1900px;
+    align-items: center;
+
+    .top{
+        img{
+            border-radius: 0.5rem;
+            width: 100%;
+        }
+    }
+
+    .bottom{
+        background-color: #1E1E1E;
+        border-radius: 0.5rem;
+        @include flexing(3rem);
+        padding: 2rem;
+
+        .bottomdown{
+            @include flexing(1rem);
+            
+            h2{
+                font-size: 2.5rem;
+                font-weight: 200;
+                text-transform: uppercase;
+            }
+
+            p{
+                font-weight: 300;
+                color: gray;
+                line-height: 1.7rem;
+                font-size: 1.3rem;
+            }
+
+            button{
+                display: flex;
+                align-items: end;
+                padding-top: 1rem;
+
+                i{
+                    background-color: #000000;
+                    border-radius: 50%;
+                    border: 0.5px solid white;
+                    padding: 0.2rem;
+                }
+
+                background-color: transparent;
+                outline: none;
+                border: none;
+                text-transform: uppercase;
+                display: flex;
+                gap: 0.2rem;
+            }
+            
+        }
+    }
+}
+
+@media (min-width: 990px){
+    main {
+        flex-direction: row;
+        gap: 0.3rem;
+
+        .top,
+        .bottom{
+            width: 50%;
+        }
+
+        .bottom{
+            justify-content: space-between;
+            padding: 1rem;
+            gap: 1.5rem;
+
+            .bottomTop{
+                font-size: 0.4rem;
+            }
+
+            .bottomdown{
+                gap: 0.1rem;
+
+                h2{
+                    font-size: 1rem;
+                }
+                p{
+                    font-size: 0.4rem;
+                    line-height: 0.7rem;
+                }
+                button{
+                    align-items: center;
+                }
+            }
+        }
+    }        
+}

@@ -1,169 +1,102 @@
-@font-face {
-    font-family: NamKaran;
-    src: url('../Fonts/Mona-Sans-870dff5a10221ba7d01cc47eca10d0b2f911bd4196bb941985490bd8c7363cd9.woff2');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: NamKaran;
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
-html,body{
-    /* width: 100%;
-    height: 100%; */
-    background-color: rgba(193, 187, 187, 0.564);
+html {
+  background-color: black;
+  font-size: 4vw;
 }
 
-body{
-    padding: 20px;
+main {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-width: 1900px;
+  align-items: center;
+}
+main .top img {
+  border-radius: 0.5rem;
+  width: 100%;
+}
+main .bottom {
+  background-color: #1E1E1E;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+main .bottom .bottomdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .bottom .bottomdown h2 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+main .bottom .bottomdown p {
+  font-weight: 300;
+  color: gray;
+  line-height: 1.7rem;
+  font-size: 1.3rem;
+}
+main .bottom .bottomdown button {
+  display: flex;
+  align-items: end;
+  padding-top: 1rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  display: flex;
+  gap: 0.2rem;
+}
+main .bottom .bottomdown button i {
+  background-color: #000000;
+  border-radius: 50%;
+  border: 0.5px solid white;
+  padding: 0.2rem;
 }
 
-#NavBar{
-    width: 100%;
-    height: 100px;
-    display: flex;
+@media (min-width: 990px) {
+  main {
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+  main .top,
+  main .bottom {
+    width: 50%;
+  }
+  main .bottom {
     justify-content: space-between;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  main .bottom .bottomTop {
+    font-size: 0.4rem;
+  }
+  main .bottom .bottomdown {
+    gap: 0.1rem;
+  }
+  main .bottom .bottomdown h2 {
+    font-size: 1rem;
+  }
+  main .bottom .bottomdown p {
+    font-size: 0.4rem;
+    line-height: 0.7rem;
+  }
+  main .bottom .bottomdown button {
     align-items: center;
-    
-}
-
-#NavBar .left{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: end;
-    gap: 40px;
-    background-color: transparent;
-}
-
-#NavBar .left img{
-    height: 30px;
-    cursor: pointer;
-}
-
-#NavBar .left a{
-    color: black;
-    text-decoration: none;
-}
-
-#NavBar .right{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-}
-
-#NavBar .right button{
-    background-color: black;
-    color: white;
-    height: 40px;
-    width: 110px;
-    border-radius: 50px;
-}
-#NavBar .right button:hover{
-    color: gray;
-}
-
-#main{
-    display: flex;
-    justify-content: space-around;
-    padding: 24px 40px;
-}
-
-#main .left h2{
-    font-family: NamKaran;
-    font-size: 50px;
-    font-weight: 100px;
-    
-}
-#main .right{
-    height: 350px;
-    width: 500px;
-    text-align: center;
-    background-color: aqua;
-    border: 1px solid black;
-    border-radius: 20px;
-    overflow: hidden;
-
-}
-#main .right video{
-    height: 400px;
-    object-fit: cover;
-}
-
-#main .right .card{
-    width: 100%;
-    height: 15%;
-    background: linear-gradient(transparent,black);
-    color: white;
-}
-
-#main .right:hover .card{
-    transform: translateY(-100%);
-}
-
-#NavBar2{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0px;
-}
-
-#NavBar2 button{
-    height: 50px;
-    width: 100px;
-    background-color: transparent;
-    border: none;
-    border-radius: 50px;
-}
-
-#NavBar2 button:hover{
-    color: gray;
-}
-
-#MainCards{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-#MainCards .card{
-    height: 350px;
-    width: 400px;
-    background-color: beige;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;   
-}
-
-#MainCards .card img{
-    height: 350px;
-    width: 400px;
-    object-fit: cover;
-    object-position: center;
-}
-
-#MainCards .card .Other{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(transparent, black);
-    color: white;
-    position: absolute;
-
-    bottom: -60px;
-}
-
-.Other .OneMore{
-    display: flex;
-    gap: 10px;
-}
-
-.card:hover .Other{
-    transform: translateY(-100%);
-    transition: all ease 0.5s;
-}
+  }
+}/*# sourceMappingURL=style.css.map */
